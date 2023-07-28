@@ -1,0 +1,83 @@
+.container{
+   position: absolute;
+   width: 5.5rem;
+   height: 5.5rem;
+   right: 2rem;
+   bottom: 2rem;
+   border: 2px solid var(--color-primary-dark);
+   border-radius: 50%;
+   background-color: var(--color-primary);
+   cursor: pointer;
+}
+
+.container figure{
+   border-radius: 50%;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container figure svg{
+   font-size: 3.5rem;
+   fill: var(--white);
+}
+
+.ImportantInformationsBox{
+   border-top: 3px solid var(--color-primary-dark);
+   border-left: 3px solid var(--color-primary-dark);
+   border-right: 3px solid var(--color-primary-dark);
+   background-color: var(--color-primary);
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
+   height: 70vh;
+   position: fixed;
+   transition: all .4s ease-in-out;
+   cursor: auto;
+   padding: 1rem;
+
+   width: 100%;
+   right: 0;
+   bottom: -70vh;
+
+   opacity: 0;
+
+   display: flex;
+   align-items: center;
+}
+
+.container:hover > .ImportantInformationsBox{
+   bottom: 0;
+   opacity: 1;
+}
+
+@media screen and (min-width: 768px){
+   .container{
+      right: 1.8rem;
+      top: calc(50% - 2rem);
+      width: 4.5rem;
+      height: 4.5rem;
+   }
+
+   .ImportantInformationsBox{
+      border: 3px solid var(--color-primary-dark);
+
+      width: 28rem;
+      top: 15%;
+      right: -100vw;
+
+      right: -28vw;
+      border-radius: var(--border-radius);
+
+      right: 3rem;
+      transform: scaleY(0);
+   }
+
+   .container:hover > .ImportantInformationsBox{
+      transform: scaleY(1);
+   }
+
+   .container figure svg{
+      font-size: 2.8rem;
+   }
+}

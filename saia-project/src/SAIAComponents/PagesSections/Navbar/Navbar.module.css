@@ -1,0 +1,225 @@
+.navbar{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: var(--transition-ease);
+  background-color: var(--color-primary);
+  transform: translateX(-100%);
+  position: absolute;
+  z-index: 2;
+}
+
+.menu{
+  position: absolute;
+  z-index: 3;
+  top: 1.8rem;
+  left: 1rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.menu svg{
+  width: 3.5rem;
+  height: 3rem;
+  fill: var(--color-primary);
+  transition: var(--transition-ease);
+}
+
+.navbar ul{
+  width: 90%;
+  max-width: 50rem;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.navbar ul li{
+  list-style: none;
+  transition: var(--transition-ease);
+  border-radius: 5rem;
+}
+
+.navbar ul li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5rem;
+  padding: 1rem 0 1rem 5rem;
+}
+
+.navbar ul li:not(.logout) a .icon{
+  display: none;
+}
+
+.navbar ul li a .icon svg{
+  fill: var(--white);
+}
+
+.navbar ul li a .text{
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+.navbar ul li.logo{
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+}
+
+.navbar ul li.logo a{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.navbar ul li.logo a img{
+  width: 100%;
+  max-width: 9rem;
+}
+
+.navbar ul li.logo:hover{
+  background: transparent;
+}
+
+.navbar ul li.logout{
+  position: absolute;
+  width: 100%;
+  bottom: 5.5rem;
+}
+
+.navbar ul li.logout a{
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.navbar ul li.logout svg{
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.saiaVersion{
+  position: absolute;
+  bottom: 2.7rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.navMobile{
+  position: absolute;
+  width: 100%;
+  height: 7rem;
+  background-color: var(--white);
+  z-index: 4;
+  transition: var(--transition-ease);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .5rem;
+}
+
+.navMobile figure{
+  width: 100%;
+  max-width: 8rem;
+}
+
+.navMobile figure img{
+  width: 100%;
+}
+
+@media screen and (min-width: 450px){
+  .navbar ul li:not(.logout) a .icon{
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .menu{
+    display: none;
+  }
+  
+  .navbar{
+    width: 13rem;
+    background-color: var(--white);
+    transform: translateX(0vw);
+    opacity: 0;
+    animation: var(--opacity-animation);
+  }
+
+  .navbar:hover{
+    width: 45rem;
+    border-right: 3px solid var(--color-primary);
+  }
+
+  .navbar ul{
+    width: 100%;
+    max-width: unset;
+    margin: unset;
+  }
+
+  .navbar ul li{
+    border-radius: 0 5rem 5rem 0;
+  }
+
+  .navbar ul li:hover{
+    background: var(--color-primary);
+  }
+
+  .navbar ul li:hover a .text{
+    color: var(--white);
+  }
+
+  .navbar ul li:hover a .icon svg{
+    fill: var(--white);
+  }
+
+  .navbar ul li.logo{
+    opacity: 1;
+  }
+
+  .navbar ul li a{
+    white-space: nowrap;
+  }
+
+  .navbar ul li a .text{
+    color: var(--color-primary);
+  }
+
+  .navbar ul li a .icon svg{
+    fill: var(--color-primary);
+  }
+
+  .navbar ul li.logout a .icon svg{
+    width: 4rem;
+    height: 3rem;
+  }
+
+  .navbar ul li.logout:hover > a svg path:last-child{
+    animation: logoutAnimation .25s ease-in alternate infinite;
+  }
+
+  .navMobile{
+    display: none;
+  }
+
+  .saiaVersion{
+    color: var(--color-primary);
+  }
+}
+
+@keyframes logoutAnimation {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(.3rem);
+  }
+}

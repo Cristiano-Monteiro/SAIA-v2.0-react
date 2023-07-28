@@ -1,0 +1,52 @@
+.container{
+   border-radius: var(--border-radius);
+   width: 100%;
+   padding-top: 3rem;
+   /*box-shadow: 0 0 1.5rem #c3c3c3;*/
+   border: 3px solid var(--color-neutral);
+   position: relative;
+   margin-top: 1.5rem;
+   margin-bottom: 1.5rem;
+
+   animation: chartAnimation .5s ease-in-out forwards;
+}
+
+.typeChartChange{
+   background-color: var(--color-primary);
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   display: flex;
+   border-radius: 2.5rem;
+   overflow: hidden;
+   display: none;
+}
+
+.typeChartChange figure{
+   border-radius: 50%;
+   cursor: pointer;
+   display: flex;
+   transition: var(--transition-linear);
+}
+
+.typeChartChange figure:hover{
+   background-color: var(--color-bttn-hover);
+}
+
+.typeChartChange figure svg{
+   border-radius: 50%;
+   fill: var(--white);
+   font-size: 4rem;
+   padding: .5rem;
+}
+
+@keyframes chartAnimation{
+   from{
+      opacity: 0;
+      transform: scale(.98);
+   }
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}

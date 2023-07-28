@@ -1,0 +1,112 @@
+.container{
+  width: 100%;
+  height: calc(100% - 12rem);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.formField{
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.formField input[type='text'],
+.formField textarea{
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 0;
+  outline: 2px solid var(--color-neutral);
+  padding: 1rem;
+  font-size: 2rem;
+  transition: var(--transition-ease);
+  background-color: #f9f9f9;
+}
+
+.formField input[type='text']:focus,
+.formField input[type='text']:valid,
+.formField textarea:focus,
+.formField textarea:valid{
+  outline: 2px solid var(--color-primary-dark);
+}
+
+.formField textarea{
+  resize: none;
+}
+
+.formField button[type='button']{
+  background-color: var(--color-primary-dark);
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  border-radius: var(--border-radius);
+  border: 0;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-ease);
+}
+
+.formField button[type='button']:hover{
+  background-color: var(--color-bttn-hover);
+}
+
+.formField button[type='button'] svg{
+  fill: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media screen and (min-width: 768px){
+  .container{
+    height: calc(100% - 7.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formField{
+    height: auto;
+    grid-template-rows: .7fr 10fr 1fr;
+    max-width: 60%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formField input[type='text'],
+  .formField textarea{
+    font-size: 1.5rem;
+  }
+
+  .formField input[type='text']{
+    height: 5rem;
+  }
+
+  .formField textarea{
+    height: 35rem;
+  }
+
+  .formField button[type='button']{
+    max-width: 17rem;
+    padding: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .formField button[type='button'] svg{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
