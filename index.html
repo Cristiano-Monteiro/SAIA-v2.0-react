@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FAVICONS - SAIA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/SAIA-v2.0-react/assets/apple-touch-icon-a7384d97.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABB5JREFUWEfFlG1oW1UYx++5uWlTV7ok9zarQpmFMfDDEEdWnaNdosJENkTXDCQ5MbjmgmNtV5yzSdnodKOp+NK16LreVNacpBaijn0QK8y+IcU2nYLiFzfYYKBrc+9tNtM2bZJ7JHEdybzNcstMztfn5f87z/M/BxBFPqBY+o0R+IJXi0aLAmDBFpVWKDnCMYHeogA0irY6FQmWL2jRbFEAWAG29veic0QHIRUcwIRN1Dax+qiXRt0p/ykG4CcdjkWwenlr3dDCRgzsXIB7pWRyeYAZmlEMgGdZNR9dCV9SHzjM7mn4ekMAgu04p/d/QgBCUgwgjNt3AwKcaCr/dDpg1HuUAtwbf4uXRh+v1SpagTAJT0sJfLW1/FxVklR/86WxglcCwS7YzZKUXPbSgZ82BjABR8RF/lU3M6grI1X7fUbaqwhAhG1P6NCHHffGr2gFkQlYI2HQqjf5mlOFtlnhpN9If5AvAItZtSQsvuNlAlmry3sF/DhsJjHxs96MfkwDhISDGMT/CBirfssHwsnbXyKAtMTR/qnMfCUAg6PzsbcOHQomUw0sU7fKSqjSY4FaQ2deAIL1VES/ejYI/q1X5IHolTe2xCiqhTEhd2YxnBVOlRH6zn4jiOeCsGBLiVbQnOAYdObBvLwmIEzAwxhLvzKmQCizgTU0twcAUus3Vn6bC8ApwH3pz8cwNCkLgN3uLcS1azwIZo9nLVmchD26OtQCAIGzGnRgEr4inEW1jCsXQKMIz1zX3eoYB+MJWQCpvf0HDMBtMh4/Arq67mQm3Rmx6BMazVHahN6XE7FN8++trMS/CNY/HpaLO26YNOqK6naORifl4ukVxFyu7aUU1YQxNoNEohl4PKP3bz9mtSXI5O+GvcO/yAJcnd8GJHIf2sV8Jhd3ivb9WMJLXgbd77muCbHLtR0D0IkJYo5cWnKD7u6IOGH36Op9rv+MP6MLDPE9aBeT/h8ePI0C/IjUl7n6Qb+sUWVNGG9re1lFUa1SeXww8tyfWxkTyvnUbDNhNpHAoeHnDVlTYvGBx7CoO83RvnfX88i6rwA7HJrYzs3w7x3CmMHsv57LZK9N36XLVavHkTHbjE7BdlAiiMUB2j+iGCCXoKwXQkIfFb177KK5JrYWZ0V7X6ku3NILvlv53wHgzNzrBAYq9KwhmBKziJbNWknj4Rj0dq7L5PUR5TMNxw2sSYb5AVRbaU3lO3kICRWIcjrfpYIApERgKHw+TlFdw8/obrIC/IrSxxyfg2C0YADWGf5FksD16pqmCyqg7uEY1PCw6T2yFaSETGOYqt4kTJU+6b4MVMvzHI24ggKkxN4M8ecpw5AtWTG146Ju+GbBAayhvxqokkjf4NNPMQ8TT8Uf6QrSRvz+9iZQSez27ay6UhSAfEQzc/4B57SeMND0F5EAAAAASUVORK5CYII=">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAcJJREFUOE9jZKAAJLxPEGAkV3/C+wABtr+cEmQbkPQ20nKe8PLjWA34/5+B8fbBnBw1hymTcbkw9W2M1WzhJcewGvDuUJzebmYXjy52rf6zJia/0Q2J+hAlyP6XUXK+8NJr2A04GBdVL1W79t0nIcOlxsIn0A1IeRdjO0doyWGQOFYD3u6LCRZ2WrI25vRrhyWmogfQDUh9H2s/W3DxQawGvDscK8fwn1FAyG7RpcizL/UY/v99ttxE6g3MkLhPccJsf35LzxFafglswK+KClNWVtYfjM3Nl0ECb/fHeAg7LtkB0xB1+o3LMlORPTB+8odo57n8S/cxMDL8Bxvwv7CQk4GbO+rv37//mI8fX/yuQcZR2GHJbpiGmFOvPJaYicENTH0b6z5bePFOmDw8DD4WFgpxCrL4fbR5flzUaclNmILQM+/kWP78FlhuIX4p5WWk+D92Ftl5AovPYBiAL0VGn3wTuNRcZH3K+zj/OQKLNsGcjzMW0A2LPvky8Om3b9tV9GsD5wgtWY4sT1RSjrr0QZCZ4WI6h9TcM7NFFsEDlGgXgBQmXDm2iYG7KmyB4oEfJLsApCHu5CfhReZ8b9G9BwA85qOjfgNAFAAAAABJRU5ErkJggg==">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+    <title>SAIA</title>
+    <script type="module" crossorigin src="/SAIA-v2.0-react/assets/index-869a9957.js"></script>
+    <link rel="stylesheet" href="/SAIA-v2.0-react/assets/index-6e895ec3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>
